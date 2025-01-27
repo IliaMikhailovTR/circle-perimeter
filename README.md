@@ -5,4 +5,4 @@ a **precise calculation** based on the mathematical formula and an **approximate
 The program also compares the two methods to determine the number of polygon sides required
 to achieve a specified precision.
 
-Check the [Main](src/main/java/com/ilia/Main.java) class for the entry point of the application:
+Check the [Main](src/main/java/com/ilia/Main.java) class for the entry point of the application.
