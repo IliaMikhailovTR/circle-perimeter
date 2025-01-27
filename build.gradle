@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.ilia'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+}
+
+dependencies {
+    implementation(
+            'ch.obermuhlner:big-math:2.3.2',
+            'ch.qos.logback:logback-classic:1.5.8',
+            'ch.qos.logback:logback-core:1.5.8'
+    )
+    compileOnly(
+            'org.projectlombok:lombok:1.18.30'
+    )
+    annotationProcessor(
+            'org.projectlombok:lombok:1.18.30'
+    )
+
+    testRuntimeOnly(
+            'org.junit.platform:junit-platform-launcher'
+    )
+    testImplementation(
+            platform('org.junit:junit-bom:5.10.0'),
+            'org.junit.jupiter:junit-jupiter',
+            'org.projectlombok:lombok:1.18.28',
+            'org.assertj:assertj-core:3.24.2'
+    )
+}
+
+test {
+    useJUnitPlatform()
+}
